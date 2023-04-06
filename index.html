@@ -1,74 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Work on Github</title>
-</head> 
-<link rel="stylesheet" href="style.css">
+    <title>Work on Github</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
- <div class="container">
-   
-<h1 class="header">Работа с Github</h1>
-   <p class="work_done">Онлайн датчики</p>
-   <button class="btn" onclick="myFunction()">Try it</button>
-            <ul class="" , id="demo"></ul> 
-   <h1 class="work_done">Работу выполнили:</h1>
-   <p class="name_sanzh">Санжиев Санжи Баирович</p>
-   <img class="jpg_sanzh", src="pics/sanzhi.jpg">
-   <p1 class="links_sanzh">LINKS:</p1>
-    <p class="img">
-        <a href="https://github.com/sansanzhik">
-    <img class="github_sanzh", src="pics/github_icon.png">
-        </a>
-        <a href="https://t.me/sansanzhik">
-    <img class="tg_sanzh", src="pics/tg_icon.png">
-        </a>
-    </p>
-   <p class="name_melesh">Мелешенко Иван Александрович</p>
-   <img class= "jpg_ivan", src="pics/ivan.jpg">
-   <p1 class="links_ivan">LINKS:</p1>
-    <p class="img">
-        <a href="https://github.com/bebrik9">
-    <img class="github_ivan", src="pics/github_icon.png">
-        </a>
-        <a href="https://t.me/bebrik9">
-    <img class="tg_ivan", src="pics/tg_icon.png">
-        </a>        
-    </p>
-   <p class="name_dmitrii">Карпеченков Дмитрий Сергеевич</p>
-   <img class="jpg_dmitrii", src="pics/dmitrii.jpg">
-   <p1 class="links_dmitrii">LINKS:</p1>
-   <p class="img">
-        <a href="https://github.com/JolyPug">
-    <img class="github_dmitrii", src="pics/github_icon.png">
-        </a>
-        <a href="https://t.me/Blenderlybae">
-    <img class="tg_dmitrii", src="pics/tg_icon.png">
-        </a>
-    </p>
-   <img class="gif", src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">  
-</div>
-<script>
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-    async function myFunction() {
-        try {
-            const response = await fetch('https://kav-api.kovalev.team/servodrive/lastActualData?servoDriveId=1');
-            const data = await response.json();
-            const el = document.getElementById('demo');
-            el.innerHTML = '';
-
-            for (const [key, value] of Object.entries(data[0])) {
-                const newEl = document.createElement('li');
-                newEl.appendChild(document.createTextNode(`${key}: ${value}`));
-                el.appendChild(newEl);
-                await sleep(0);
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    }
-</script>       
+    <div class="container">
+        <h1 class="header">Работа с Github</h1>
+        <p class="work_done">Онлайн датчики</p>
+        <button class="btn" onclick="myFunction()">Try it</button>
+        <ul id="demo"></ul> 
+        <h1 class="work_done">Работу выполнили:</h1>
+        <p class="name_sanzh">Санжиев Санжи Баирович</p>
+        <img class="jpg_sanzh" src="pics/sanzhi.jpg">
+        <p1 class="links_sanzh">LINKS:</p1>
+        <p class="img">
+            <a href="https://github.com/sansanzhik" id="github_sanzh">
+                <img class="github" src="pics/github_icon.png">
+            </a>
+            <a href="https://t.me/sansanzhik" id="tg_sanzh">
+                <img class="tg" src="pics/tg_icon.png">
+            </a>
+        </p>
+        <p class="name_melesh">Мелешенко Иван Александрович</p>
+        <img class= "jpg_ivan" src="pics/ivan.jpg">
+        <p1 class="links_ivan">LINKS:</p1>
+        <p class="img">
+            <a href="https://github.com/bebrik9" id="github_ivan">
+                <img class="github" src="pics/github_icon.png">
+            </a>
+            <a href="https://t.me/bebrik9" id="tg_ivan">
+                <img class="tg" src="pics/tg_icon.png">
+            </a>        
+        </p>
+        <p class="name_dmitrii">Карпеченков Дмитрий Сергеевич</p>
+        <img class="jpg_dmitrii" src="pics/dmitrii.jpg">
+        <p1 class="links_dmitrii">LINKS:</p1>
+        <p class="img">
+            <a href="https://github.com/JolyPug" id="github_dmitrii">
+                <img class="github" src="pics/github_icon.png">
+            </a>
+            <a href="https://t.me/Blenderlybae" id="tg_dmitrii">
+                <img class="tg" src="pics/tg_icon.png">
+            </a>
+        </p>
+        <img class="gif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">  
+    </div>
+    <script src="script.js"></script>       
 </body>
 </html>
