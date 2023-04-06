@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>Work on Github</title>
-</head>
-  
+</head> 
 <link rel="stylesheet" href="style.css">
 <body>
  <div class="container">
@@ -11,10 +10,7 @@
 <h1 class="header">Работа с Github</h1>
    <p class="work_done">Онлайн датчики</p>
    <button class="btn" onclick="myFunction()">Try it</button>
-            <ul class="" , id="demo">
-
-            </ul>
-   
+            <ul class="" , id="demo"></ul> 
    <h1 class="work_done">Работу выполнили:</h1>
    <p class="name_sanzh">Санжиев Санжи Баирович</p>
    <img class="jpg_sanzh", src="pics/sanzhi.jpg">
@@ -36,8 +32,7 @@
         </a>
         <a href="https://t.me/bebrik9">
     <img class="tg_ivan", src="pics/tg_icon.png">
-        </a>
-        
+        </a>        
     </p>
    <p class="name_dmitrii">Карпеченков Дмитрий Сергеевич</p>
    <img class="jpg_dmitrii", src="pics/dmitrii.jpg">
@@ -50,30 +45,30 @@
     <img class="tg_dmitrii", src="pics/tg_icon.png">
         </a>
     </p>
-   <img class="gif", src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
-   
-   
-   
+   <img class="gif", src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">  
 </div>
-  <script>
-            function sleep(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
+<script>
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function myFunction() {
+        try {
+            const response = await fetch('https://kav-api.kovalev.team/servodrive/lastActualData?servoDriveId=1');
+            const data = await response.json();
+            const el = document.getElementById('demo');
+            el.innerHTML = '';
+
+            for (const [key, value] of Object.entries(data[0])) {
+                const newEl = document.createElement('li');
+                newEl.appendChild(document.createTextNode(`${key}: ${value}`));
+                el.appendChild(newEl);
+                await sleep(0);
             }
-            function myFunction() {
-                (async () => {
-                    let response = await fetch('https://kav-api.kovalev.team/servodrive/lastActualData?servoDriveId=1');
-                    let el = document.getElementById('demo')
-                    el.innerHTML = ""
-                    let text = await response.text(); // прочитать тело ответа как текст
-                    for (const [key, value] of Object.entries(JSON.parse(text)[0])) {
-                        const newEl = document.createElement("li")
-                        newEl.appendChild(document.createTextNode(`${key}: ${value}`))
-                        el.appendChild(newEl)
-                        await sleep(0)
-                    }
-                })()
-            }
-        </script>
-        
+        } catch (error) {
+            console.log(error);
+        }
+    }
+</script>       
 </body>
 </html>
