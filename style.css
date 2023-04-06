@@ -1,176 +1,182 @@
-body {
-  position: center;
-  background-color: #ebe8d0;
+body
+{
+   position: center;
+   background-color: #ebe8d0;
 }
 
 .title {
-  color: #5C6AC4;
+	color: #5C6AC4;
 }
-
-.container {
+.container
+{
   width: 600px; 
   height: 1488px;
   margin: 0 auto;
 }
-
-.header {
+.header 
+{
   margin-left: 210px;
   margin-top: 32px;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; 
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
   font-size: 22px;
 }
-
-.work_done {
+.work_done
+{
   margin-left: 61px;
   margin-top: 92px;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 22px;
 }
-
-.name_sanzh {
+.name_sanzh
+{
   margin-left: 274px;
   margin-top: 30px;
+  
   font-family: Helvetica light;
   font-size: 22px;
 }
-
-.jpg_sanzh {
+.jpg_sanzh
+{
   width: 177px;
   height: 177px;
   margin-left: 319px;
-  margin-top: 15px;
+  --margin-top: 15px;
   border-radius: 16px;
 }
+.links_sanzh
+{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
 
-.links_sanzh {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; 
   margin-left: 373px;
   margin-top: auto;
-}
 
-.img {
+}
+.img  
+{
   display: flex;
 }
-
-.github_sanzh {
+.github_sanzh
+{
   width: 54px;
   height: 52px;
   margin-left: 347px;
 }
-
-.tg_sanzh {
+.tg_sanzh
+{
   width: 54px;
   height: 55px;
   margin-left: auto;
   margin-right: 134px;
   display: flex;
-  border-radius: 16px;
-}
 
-.name_melesh {
+}
+.name_melesh
+{
   margin-left: 61px;
-  margin-top: 30px;
+  --margin-top: 30px;
   font-family: Helvetica light;
   font-size: 22px;
 }
-
-.jpg_ivan {
+.jpg_ivan
+{
   width: 177px;
   height: 177px;
   margin-left: 140px;
-  margin-top: 15px;
+  --margin-top: 15px;
   border-radius: 16px;
 }
+.links_ivan
+{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
 
-.links_ivan {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; 
   margin-left: 198px;
   margin-right: 327px;
   margin-top: auto;
-}
 
-.github_ivan {
+}
+.github_ivan
+{
   width: 54px;
   height: 52px;
   margin-left: 172px;
   margin-top: auto;
 }
-
-.tg_ivan {
+.tg_ivan
+{
   width: 54px;
   height: 55px;
   margin-left: auto;
   margin-right: 309px;
   display: flex;
-  border-radius: 16px;
 }
-
-.name_dmitrii {
+.name_dmitrii
+{
   margin-left: 239px;
-  margin-top: 30px;
+  --margin-top: 30px;
   font-family: Helvetica light;
   font-size:22px;
 }
-
-.jpg_dmitrii {
+.jpg_dmitrii
+{
   width: 177px;
   height: 177px;
   margin-left: 319px;
-  margin-top: 15px;
+  --margin-top: 15px;
   border-radius: 16px;
 }
+.links_dmitrii 
+{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
 
-.links_dmitrii {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; 
   margin-left: 377px;
   margin-right: 148px;
   margin-top: auto;
-}
 
-.github_dmitrii {
+}
+.github_dmitrii
+{
   width: 54px;
   height: 52px;
   margin-left: 351px;
   margin-top: auto;
 }
-
-.tg_dmitrii {
+.tg_dmitrii
+{
   width: 54px;
   height: 55px;
   margin-left: auto;
   margin-right: 130px;
   display: flex;
-  border-radius: 16px;
-}
 
-.gif {
+}
+.gif
+{
+  margin-top: auto;
+  margin-left: 150px;
   margin-top: 40px;
-  margin-left: 150px;
 }
-
-.btn {
-  margin-left: 150px;
-  margin-top: 30px;
-  border-radius: 16px;
-  border: solid 2px #4CAF50;
-  color: #3e918a;
-  font-weight: 600;
-  font-size: 22px;
-  padding: 14px 28px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transition-duration: 14s;
-  cursor: pointer;
+.btn
+{
+    margin-left: 150px;
+    margin-top: 30px;
+    border-radius: 16px;
+    border: solid 2px #4CAF50;
+    color: #3e918a;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 14px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: 4px 2px;
+    transition-duration: 14s;
+    cursor: pointer;
 }
-
-ul {
-  width: 300px;
-  font-family: Helvetica Neue;
-  font-size: 18px;
-  animation-duration: 1s;
-  animation-name: slidein;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+ul{
+    width:300px;
+   font-family: Helvetica Neue;
+   font-size: 18px;
+   animation-duration: 1s;
+   animation-name: slidein;
 }
